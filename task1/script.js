@@ -1,7 +1,6 @@
 const display = document.getElementById("display");
 let expression = "";
 
-
 function appendNumber(num) {
     if (display.value === "Error") clearDisplay();
 
