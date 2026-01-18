@@ -1,7 +1,6 @@
 const display = document.getElementById("display");
 let expression = "";
 
-// Append numbers
 function appendNumber(num) {
     if (display.value === "Error") clearDisplay();
 
@@ -11,7 +10,7 @@ function appendNumber(num) {
     display.value = expression;
 }
 
-// Append operators
+
 function appendOperator(op) {
     if (!expression) return;
 
@@ -22,19 +21,16 @@ function appendOperator(op) {
     display.value = expression;
 }
 
-// Clear all
 function clearDisplay() {
     expression = "";
     display.value = "0";
 }
 
-// Delete last character
 function deleteLast() {
     expression = expression.slice(0, -1);
     display.value = expression || "0";
 }
 
-// Calculate result
 function calculateResult() {
     try {
         const result = Function(`"use strict"; return (${expression})`)();
@@ -46,14 +42,13 @@ function calculateResult() {
     }
 }
 
-// Percentage
 function calculatePercent() {
     if (!expression) return;
     expression = (parseFloat(expression) / 100).toString();
     display.value = expression;
 }
 
-// Square root
+
 function calculateSqrt() {
     const value = Number(expression);
     if (value < 0 || isNaN(value)) {
@@ -65,7 +60,6 @@ function calculateSqrt() {
     display.value = expression;
 }
 
-// Square
 function calculateSquare() {
     const value = Number(expression);
     if (isNaN(value)) {
@@ -77,7 +71,7 @@ function calculateSquare() {
     display.value = expression;
 }
 
-// Keyboard support
+
 document.addEventListener("keydown", e => {
     if (!isNaN(e.key) || e.key === ".") {
         appendNumber(e.key);

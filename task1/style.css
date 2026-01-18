@@ -14,7 +14,6 @@ body {
     align-items: center;
 }
 
-/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -36,7 +35,6 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* CALCULATOR */
 .calculator {
     width: 340px;
     padding: 22px;
@@ -47,7 +45,6 @@ body {
     margin-top: 80px; /* prevents navbar overlap */
 }
 
-#display {
     width: 100%;
     height: 64px;
     font-size: 26px;
@@ -59,7 +56,7 @@ body {
     background: #f3f4f6;
 }
 
-/* BUTTON GRID */
+
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -87,7 +84,6 @@ button:active {
     transform: scale(0.95);
 }
 
-/* BUTTON TYPES */
 .operator {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
