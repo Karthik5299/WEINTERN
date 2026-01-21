@@ -3,17 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #667eea, #764ba2);
     font-family: 'Segoe UI', sans-serif;
-
+ 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+ 
 .navbar {
     position: fixed;
     top: 0;
@@ -22,7 +22,7 @@ body {
     padding: 20px 28px;
     z-index: 10;
 }
-
+ 
 .logo {
     display: inline-block;
     padding: 8px 18px;
@@ -34,17 +34,18 @@ body {
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
-
+ 
 .calculator {
     width: 340px;
     padding: 22px;
     background: #ffffff;
     border-radius: 18px;
     box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-
+ 
     margin-top: 80px; /* prevents navbar overlap */
 }
-
+ 
+#display {
     width: 100%;
     height: 64px;
     font-size: 26px;
@@ -55,15 +56,14 @@ body {
     border: none;
     background: #f3f4f6;
 }
-
-
+ 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 56px;
     gap: 14px;
 }
-
+ 
 button {
     height: 56px;
     font-size: 18px;
@@ -74,32 +74,33 @@ button {
     background: #e5e7eb;
     transition: all 0.15s ease;
 }
-
+ 
 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
-
+ 
 button:active {
     transform: scale(0.95);
 }
-
+ 
 .operator {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
-
+ 
 .control {
     background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
 }
-
+ 
 .equals {
     background: linear-gradient(135deg, #43e97b, #38f9d7);
     color: #000;
-
+ 
     grid-row: span 3;
     height: 100%;
 }
-
+ 
 .zero {
     grid-column: span 2;
 }
+ 
